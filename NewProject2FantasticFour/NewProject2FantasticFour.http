@@ -1,0 +1,6 @@
+@NewProject2FantasticFour_HostAddress = http://localhost:5240
+
+GET {{NewProject2FantasticFour_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
