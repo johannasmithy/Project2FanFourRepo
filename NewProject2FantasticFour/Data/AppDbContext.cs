@@ -17,14 +17,14 @@ namespace Project2.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
-                .HasMany(s => s.SavedTrips)
-                .WithOne(u => u.User)
-                .HasForeignKey(u => u.UserId);
+                .HasMany(u => u.SavedTrips)
+                .WithOne(s => s.User)
+                .HasForeignKey(s => s.UserId);
 
             modelBuilder.Entity<Trip>()
                 .HasMany(t => t.SavedTrips)
                 .WithOne(s => s.Trip)
-                .HasForeignKey( s => s.TripId);
+                .HasForeignKey(s => s.TripId);
         }
     }
 
