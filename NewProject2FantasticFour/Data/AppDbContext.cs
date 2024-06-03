@@ -27,6 +27,4 @@ namespace Project2.Data
                 .HasForeignKey(s => s.TripId);
         }
     }
-
-
 }
